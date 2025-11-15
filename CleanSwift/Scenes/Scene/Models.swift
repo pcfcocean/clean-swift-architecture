@@ -7,7 +7,7 @@ enum Models {
     enum InitForm {
         struct Request {}
         struct Response {
-            let ranodomNumber: CGFloat
+            let ranodomAlpha: CGFloat
         }
         struct ViewModel {
             let labelText: String

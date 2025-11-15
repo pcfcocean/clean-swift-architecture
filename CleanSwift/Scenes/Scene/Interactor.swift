@@ -27,9 +27,9 @@ final class Interactor: BusinessLogic, DataStore {
         worker.fetch { [weak self] uuidString in
             guard let self = self else { return }
             self.dataStoreProperty = uuidString
-            let ranodomNumber = CGFloat.random(in: 0...1)
+            let ranodomAlpha = CGFloat.random(in: 0.6 ... 0.9)
             DispatchQueue.main.async {
-                self.presenter.presentInitForm(Models.InitForm.Response(ranodomNumber: ranodomNumber))
+                self.presenter.presentInitForm(Models.InitForm.Response(ranodomAlpha: ranodomAlpha))
             }
         }
     }

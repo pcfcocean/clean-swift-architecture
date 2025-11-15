@@ -10,10 +10,10 @@ final class Presenter: PresentationLogic {
 
     func presentInitForm(_ response: Models.InitForm.Response) {
         let randomColor = UIColor(
-            red: response.ranodomNumber,
-            green: response.ranodomNumber,
-            blue: response.ranodomNumber,
-            alpha: response.ranodomNumber
+            red: CGFloat.random(in: 0...1),
+            green: CGFloat.random(in: 0...1),
+            blue: CGFloat.random(in: 0...1),
+            alpha: response.ranodomAlpha
         )
 
         let viewModel = Models.InitForm.ViewModel(
